@@ -16,7 +16,7 @@ public class GetUserTest extends BaseTest{
 	@Test
 	public void verifyGetUser() {
 		
-		System.out.println("Final Request URL: " + RestAssured.baseURI + RestAssured.basePath + "/users/2");
+		//System.out.println("Final Request URL: " + RestAssured.baseURI + RestAssured.basePath + "/users/2");
 
 		
 		Response response = given().when().get("/users/2").then().extract().response();
