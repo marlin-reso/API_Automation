@@ -2,29 +2,26 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-09T17:52:56 IST" name="Default suite" finished-at="2025-11-09T17:52:57 IST" duration-ms="1624">
+  <suite started-at="2025-11-10T15:20:06 IST" name="Default suite" finished-at="2025-11-10T15:20:08 IST" duration-ms="2115">
     <groups>
     </groups>
-    <test started-at="2025-11-09T17:52:56 IST" name="Default test" finished-at="2025-11-09T17:52:57 IST" duration-ms="1624">
-      <class name="com.restassured.framework.tests.GetUserTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.restassured.framework.tests.GetUserTest@6eda5c9]" started-at="2025-11-09T17:52:56 IST" name="setup" finished-at="2025-11-09T17:52:56 IST" duration-ms="161" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="verifyGetUser()[pri:0, instance:com.restassured.framework.tests.GetUserTest@6eda5c9]" started-at="2025-11-09T17:52:56 IST" name="verifyGetUser" finished-at="2025-11-09T17:52:57 IST" duration-ms="1447" status="FAIL">
+    <test started-at="2025-11-10T15:20:06 IST" name="Default test" finished-at="2025-11-10T15:20:08 IST" duration-ms="2115">
+      <class name="test.UserLogin">
+        <test-method signature="loginTest()[pri:0, instance:test.UserLogin@635eaaf1]" started-at="2025-11-10T15:20:06 IST" name="loginTest" finished-at="2025-11-10T15:20:08 IST" duration-ms="2104" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Status code mismatch expected [200] but found [401]]]>
+              <![CDATA[expected [200] but found [400]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Status code mismatch expected [200] but found [401]
+              <![CDATA[java.lang.AssertionError: expected [200] but found [400]
 at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1590)
 at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 at org.testng.Assert.assertEquals(Assert.java:132)
 at org.testng.Assert.assertEquals(Assert.java:1431)
 at org.testng.Assert.assertEquals(Assert.java:1395)
-at com.restassured.framework.tests.GetUserTest.verifyGetUser(GetUserTest.java:24)
+at org.testng.Assert.assertEquals(Assert.java:1441)
+at test.UserLogin.loginTest(UserLogin.java:32)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -56,8 +53,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyGetUser -->
-      </class> <!-- com.restassured.framework.tests.GetUserTest -->
+        </test-method> <!-- loginTest -->
+      </class> <!-- test.UserLogin -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
