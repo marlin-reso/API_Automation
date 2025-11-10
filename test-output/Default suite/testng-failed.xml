@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.restassured.framework.tests.GetUserTest">
+      <class name="test.UserLogin">
         <methods>
-          <include name="setup"/>
-          <include name="verifyGetUser"/>
+          <include name="loginTest"/>
         </methods>
-      </class> <!-- com.restassured.framework.tests.GetUserTest -->
+      </class> <!-- test.UserLogin -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
