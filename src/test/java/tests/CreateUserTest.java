@@ -1,15 +1,15 @@
 package tests;
 
 import base.BaseTest;
-import pojo.CreateUserRequest;
+import pojo.PojoUsersBasic;
 
 public class CreateUserTest extends BaseTest{
 	
 	
-	CreateUserRequest req = new CreateUserRequest();
+	PojoUsersBasic req = new PojoUsersBasic();
 	
 	
-	CreateUserRequest request = CreateUserRequest.builder()
+	PojoUsersBasic request = PojoUsersBasic.builder()
 			.name("naveen kumar")
 			.email("naveen@automationlabs.com")
 			.course("api testing pro")
