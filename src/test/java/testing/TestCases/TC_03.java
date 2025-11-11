@@ -8,20 +8,19 @@ import testing.TestResponseValidation.ResponseValidation;
 import testing.TestSteps.HttpMethods;
 import testing.TestUtilities.PropertiesFileLoad;
 
-public class TC_01 {
-	//Here all the test cases will be maintained.
+public class TC_03 {
 	
 	public static void main(String[] args) throws IOException {
-		//Loading the property file
+		
 		Properties prop = PropertiesFileLoad.propFileLoad("./src/test/resources/config/env.properties");
 		
-		//Initialize http method
+		
 		HttpMethods http = new HttpMethods(prop);
 		
-		//calling get method
-		Response resp = http.getRequest("users");
+		String id = "3";
 		
-		//validating the response
+		Response resp = http.deleteRequest(id, "products");
+		
 		ResponseValidation resObj = new ResponseValidation(prop);
 		resObj.responseValidation(resp);
 	}
