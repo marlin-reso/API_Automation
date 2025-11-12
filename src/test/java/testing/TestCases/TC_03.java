@@ -10,19 +10,22 @@ import testing.TestUtilities.PropertiesFileLoad;
 
 public class TC_03 {
 	
-	public static void main(String[] args) throws IOException {
+	public void testCase3() throws IOException {
 		
 		Properties prop = PropertiesFileLoad.propFileLoad("./src/test/resources/config/env.properties");
 		
 		
 		HttpMethods http = new HttpMethods(prop);
 		
-		String id = "3";
 		
-		Response resp = http.deleteRequest(id, "products");
 		
-		ResponseValidation resObj = new ResponseValidation(prop);
-		resObj.responseValidation(resp);
+		Response resp = http.deleteRequest(TC_02.jsonKeyValue,"products");
+		
+		ResponseValidation.responseStatusCodeVal(200, resp);
+		
+		System.out.println("data deleted successfuly : "+ resp.getStatusCode());
+	//	System.out.println(resp.asString());
+		
 	}
 
 }

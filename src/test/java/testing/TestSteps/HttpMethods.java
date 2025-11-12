@@ -19,7 +19,7 @@ public class HttpMethods {
 		this.prop = prop;
 	}
 	
-	public Response getRequest (String URI) {
+	public Response getRequest (String jsonKeyValue,String URI) {
 		Response resp = given().contentType(ContentType.JSON)
 				.when()
 				.get(prop.getProperty(URI));
@@ -37,12 +37,13 @@ public class HttpMethods {
 		return resp;
 	}
 	
-	public Response putRequest(PojoBodyData body, String URI) {
+	public Response putRequest(PojoBodyData body, String URI, String id) {
+		String finalURI = (String) prop.getProperty("products")+"/"+id;
 		
 		Response resp = given().contentType(ContentType.JSON)
 				.body(body)
 				.when()
-				.put(prop.getProperty(URI));
+				.put(finalURI);
 		
 		return resp;
 	}
@@ -59,7 +60,7 @@ public class HttpMethods {
 	
 	public Response deleteRequest(String id, String URI) {
 		
-		String finalUri = prop.getProperty(URI)+"/"+id;
+		String finalUri =(String) prop.getProperty(URI)+"/"+id;
 		
 		Response resp = given().contentType(ContentType.JSON)
 				.when()

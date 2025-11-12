@@ -14,5 +14,31 @@ public class PojoSimpleBody {
 		
 		return data;
 	}
+	
+	public static PojoBodyData getChaining() {
+		PojoBodyData data = new PojoBodyData();
+		
+		data.setId("4");
+		data.setName("Sony");
+		data.setPrice(60000);
+		data.setCategory("Telivision");
+		
+		return data;
+		
+		
+	}
+	
+	
+	public static PojoBodyData getUpdtaed() {
+		
+		PojoBodyData data = new PojoBodyData();
+		
+		data.setId("4");
+		data.setName("Sony");
+		data.setPrice(70000);
+		data.setCategory("Teslivision");
+		
+		return data;
+	}
 
 }
