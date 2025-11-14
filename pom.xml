@@ -41,12 +41,7 @@
     <artifactId>lombok</artifactId>
     <version>1.18.34</version>
     <scope>provided</scope>
-</dependency>
-
-
-
-    
-      
+</dependency>   
 
 <!-- https://mvnrepository.com/artifact/com.github.java-json-tools/json-schema-validator -->
 <dependency>
